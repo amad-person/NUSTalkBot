@@ -1,0 +1,23 @@
+{
+  "name": "nustalkbot",
+  "version": "1.0.0",
+  "description": "bot for NUSTalk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bot",
+    "NUSTalk"
+  ],
+  "author": "XNORbital",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.5.0",
+    "botbuilder": "^3.8.4",
+    "dotenv": "^4.0.0",
+    "google": "^2.1.0",
+    "request": "^2.81.0",
+    "restify": "^5.0.0"
+  }
+}

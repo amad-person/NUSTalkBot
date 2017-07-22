@@ -15,6 +15,7 @@ module.exports = function () {
 
     // bot declaration
     global.bot = new builder.UniversalBot(connector, function (session) {
+        session.userData.about = {};
         session.userData.about = {
             'name': "Aadyaa",
             'moduleNames': ["CS1020", "CS2100", "GER1000"],

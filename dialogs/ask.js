@@ -68,6 +68,7 @@ module.exports = function () {
             session.dialogData.success = false;
             switch (results.response.entity.toLowerCase()) {
                 case "yes":
+                    session.dialogData.currLink.helpful = true;
                     session.dialogData.success = true;
                     break;
                 case "no":
@@ -92,6 +93,10 @@ module.exports = function () {
                 res.links.splice(0, 1); // remove null object at index 0
                 linksObj = res.links;
             });
+
+        for(var i = 0; i < Object.keys(linksObj).length; i++) {
+            linksObj[i].helpful = false;
+        }
 
         return linksObj;
     }

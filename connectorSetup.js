@@ -1,11 +1,11 @@
 module.exports = function () {
+    // node modules
     global.restify = require('restify');
     global.builder = require('botbuilder');
     global.request = require('request');
     global.async = require('async');
     global.google = require('google');
-
-    require('dotenv').load();
+    require('dotenv').load(); // to load environment variables
 
     // create chat connector for communicating bot framework service
     var connector = new builder.ChatConnector({
@@ -18,7 +18,7 @@ module.exports = function () {
         session.userData.about = {
             'name': "Aadyaa",
             'moduleNames': ["CS1020", "CS2100", "GER1000"],
-            // TODO: use IVLE data, currently using default data
+            // TODO: use IVLE data, currently using default data here
             'modules': {
                 'CS1020': {
                 },
@@ -29,7 +29,6 @@ module.exports = function () {
             },
             'moduleQueries': {
                 'CS1020': {
-                    // query object with links (helpful/unhelpful flag)
                 },
                 'CS2100': {
                 },
@@ -38,8 +37,9 @@ module.exports = function () {
             }
         };
 
-        // TODO: get info from IVLE instead of NUSMods
-        // TODO: replace URLs to IVLE compatible ones by using User.getToken()
+        session.save();
+
+        // TODO: replace URLs to IVLE compatible ones by using User.getToken(). Data is obtained from NUSMods here.
         // https://wiki.nus.edu.sg/display/ivlelapi/Timetable
         // https://wiki.nus.edu.sg/display/ivlelapi/Module
 

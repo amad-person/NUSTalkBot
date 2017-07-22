@@ -22,12 +22,19 @@ bot.dialog('defaultDialog', function (session) {
     matches: 'None'
 });
 
-// bot.on('conversationUpdate', function (message) {
-//     if (message.membersAdded) {
-//         message.membersAdded.forEach(function (identity) {
-//             if (identity.id === message.address.bot.id) {
-//                 bot.beginDialog('welcomeDialog');
-//             }
-//         });
+// first time use
+// bot.dialog('firstRun', function (session) {
+//     session.userData.firstRun = true;
+//     session.beginDialog('welcomeDialog');
+//     session.replaceDialog('rootDialog');
+// }).triggerAction({
+//     onFindAction: function (context, callback) {
+//         // trigger if we've never seen user before
+//         if (!context.userData.firstRun) {
+//             // return a score of 1.1 to ensure the first run dialog wins
+//             callback(null, 1.1);
+//         } else {
+//             callback(null, 0.0);
+//         }
 //     }
 // });

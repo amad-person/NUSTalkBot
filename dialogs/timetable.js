@@ -8,6 +8,11 @@ module.exports = function () {
                 session.dialogData.timetableQuery = results.response;
             }
             session.send("You said: %s", session.dialogData.timetableQuery);
+            builder.Prompts.choice(session, "Was I helpful?", "Yes|No", builder.ListStyle.button);
+        },
+        function (session, results) {
+            switch (results.response.entity) {
+            }
         }
     ]).triggerAction({
         matches: 'Timetable'

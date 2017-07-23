@@ -5,8 +5,8 @@ module.exports = function () {
 		var IVLEToken= builder.EntityRecognizer.findEntity(args.intent.entities, 'IVLEtoken');
    		if (n) {
             session.userData.token = IVLEToken.entity;
-            
-            //session.send(session.userData.token);
+
+            session.send(session.userData.token);
         }
         session.send("%s, I have some information for you.", session.userData.about.name);
         session.send("Modules you've taken for this semester: %s", session.userData.about.moduleNames.toString());

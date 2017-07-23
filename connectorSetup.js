@@ -67,8 +67,6 @@ module.exports = function () {
         session.replaceDialog('rootDialog');
     });
 
-    var n = builder.EntityRecognizer(args.intent.entities, 'IVLEtoken')
-
     // setup the restify server
     var server = restify.createServer();
     server.listen(process.env.port || process.env.PORT || 3978, function () {
@@ -81,7 +79,7 @@ module.exports = function () {
     // LUIS recognizer
     var recognizer = new builder.LuisRecognizer(process.env.LUIS_MODEL_URL);
     bot.recognizer(recognizer);
-    global.intents = new botuilder.IntentDialog({ recognizers:[recognizer] });
+    global.intents = new builder.IntentDialog({ recognizers:[recognizer] });
 
     // middleware
     bot.use(

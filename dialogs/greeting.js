@@ -12,22 +12,13 @@ module.exports = function () {
 					session.send(session.userData.about.name);
 			});
 			*/
-			var options = {
-			  host: 'ivle.nus.edu.sg',
-			  port: 80,
-			  path: '/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token
-			};
-
-			http.get(options, function(res) {
-			  console.log("Got response: " + res.statusCode);
-			  session.userData.about.name = res.data;
-			  session.send(session.userData.about.name);
-
-			  res.on("data", function(chunk) {
-			    console.log("BODY: " + chunk);
-			  });
-			}).on('error', function(e) {
-			  console.log("Got error: " + e.message);
+			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token,function(error,response,body){
+         	  if(error){
+		       	console.log(error);
+		       } else{
+		            session.userData.about.name = response.data;
+		            console.log(response.data);
+		        }
 			});
         }
         session.send("Hey %s! I'm the NUSTalkBot. Type something.", session.userData.about.name);

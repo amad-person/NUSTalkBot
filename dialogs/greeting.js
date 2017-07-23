@@ -24,13 +24,14 @@ module.exports = function () {
          	  	session.send('error');
 		       	console.log(error);
 		       } else{
-		            console.log(JSON.parse(response.body).Results);
+		            session.send(JSON.parse(response.body).Results);
+		            /*
 		            session.userData.about.modules = JSON.parse(JSON.parse(response.body).Results);
 		            session.send("modules", session.userData.about.modules);
 		            
 		            for(var i=0;i<session.userData.about.modules.length;++i){
 		            	session.userData.about.moduleNames.push(session.userData.about.modules[i].CourseCode);
-		            }
+		            }*/
 		        }
 			});
 

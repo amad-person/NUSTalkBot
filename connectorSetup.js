@@ -20,10 +20,24 @@ module.exports = function () {
         session.token="";
         session.userData.about = {
             'name': "Aadyaa Maddi",
-            'moduleNames': ['ABC'],
+            'moduleNames': ["CS1020", "CS2100", "GER1000"],
             // TODO: use IVLE data, currently using default data here
-            'modules': {},
-            'moduleQueries': {}
+            'modules': {
+                'CS1020': {
+                },
+                'CS2100': {
+                },
+                'GER1000': {
+                }
+            },
+            'moduleQueries': {
+                'CS1020': {
+                },
+                'CS2100': {
+                },
+                'GER1000': {
+                }
+            }
         };
 
         session.save();
@@ -73,5 +87,4 @@ module.exports = function () {
     bot.use(
         builder.Middleware.sendTyping()
     );
-
 };

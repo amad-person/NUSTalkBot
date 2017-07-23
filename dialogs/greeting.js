@@ -8,11 +8,14 @@ module.exports = function () {
 			
 			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token,function(error,response,body){
          	  if(error){
+         	  	session.send('error');
 		       	console.log(error);
 		       } else{
 		            console.log(JSON.parse(response.body));
 		            var name = JSON.parse(response.body);
+		            session.send('name', name);
 		            session.userData.about.name = name.substring(0, name.indexOf(" "));
+		            
 		            //session.userData.about.moduleNames = [];
 		        }
 			});

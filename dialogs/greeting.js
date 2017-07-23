@@ -29,6 +29,10 @@ module.exports = function () {
 			});
 			
         }
+        else {
+        	session.send("Hey %s! I'm the NUSTalkBot. Type something.", session.userData.about.name.substring(0, session.userData.about.name.indexOf(" ")));
+        	session.send("If you're using this for the first time or want to see the welcome message again, type \'start\'.");
+        }
     }).triggerAction({
          matches: 'Greeting'
        });

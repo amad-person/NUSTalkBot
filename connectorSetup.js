@@ -19,7 +19,7 @@ module.exports = function () {
         session.userData.about = {};
         session.token="";
         session.userData.about = {
-            'name': "Aadyaa",
+            'name': "Aadyaa Maddi",
             'moduleNames': ["CS1020", "CS2100", "GER1000"],
             // TODO: use IVLE data, currently using default data here
             'modules': {

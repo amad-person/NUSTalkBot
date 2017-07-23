@@ -12,8 +12,6 @@ module.exports = function () {
 		       } else{
 		            console.log(JSON.parse(response.body));
 		            session.userData.about.name = JSON.parse(response.body);
-					session.send("Hey %s! I'm the NUSTalkBot. Type something.", session.userData.about.name.substring(0, session.userData.about.name.indexOf(" ")));
-        			session.send("If you're using this for the first time or want to see the welcome message again, type \'start\'.");
 		        }
 			});
 			

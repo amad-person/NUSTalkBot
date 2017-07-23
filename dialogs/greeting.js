@@ -25,9 +25,8 @@ module.exports = function () {
 		       	console.log(error);
 		       } else{
 		            console.log(JSON.parse(response.body).Results);
-		            session.send("modules %s", (JSON.parse(response.body).Results).toString());
 		            session.userData.about.modules.concat(JSON.parse(JSON.parse(response.body).Results));
-		            session.send("modules %s", session.userData.about.modules.toString());
+		            session.send("modules %s", (session.userData.about.modules).toString());
 		            
 		            //for(var i=0;i<session.userData.about.modules.length;++i){
 		           // 	session.userData.about.moduleNames.push(session.userData.about.modules[i].CourseCode);

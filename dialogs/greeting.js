@@ -5,7 +5,7 @@ module.exports = function () {
             session.token = IVLEToken.entity;
 			//session.send(session.token);
 
-			/*
+			
 			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token,function(error,response,body){
          	  if(error){
 		       	console.log(error);
@@ -15,7 +15,7 @@ module.exports = function () {
 		            session.userData.about.name = name.substring(0, name.indexOf(" "));
 		        }
 			});
-			*/
+			
 			
 
 			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/Modules?APIKey=JWE5l4plZpPkhqENrgaVx&AuthToken='+ session.token+'&Duration=0&IncludeAllInfo=false',function(error,response,body){
@@ -23,7 +23,7 @@ module.exports = function () {
 		       	console.log(error);
 		       } else{
 		            console.log(JSON.parse(response.body).Results);
-		            session.userData.about.modules = JSON.parse(response.body).Results;
+		            session.userData.about.modules = JSON.parse(JSON.parse(response.body).Results);
 		            console.log(session.userData.about.modules);
 		            
 		            for(var i=0;i<session.userData.about.modules.length;++i){

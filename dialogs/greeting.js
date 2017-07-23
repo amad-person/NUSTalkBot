@@ -5,7 +5,7 @@ module.exports = function () {
             session.token = IVLEToken.entity;
 			//session.send(session.token);
 
-			
+			//getting username
 			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token,function(error,response,body){
          	  if(error){
          	  	session.send('error');
@@ -14,27 +14,10 @@ module.exports = function () {
 		            console.log(JSON.parse(response.body));
 		            var name = JSON.parse(response.body);
 		            session.userData.about.name = name.substring(0, name.indexOf(" "));
-		            
-		            //session.userData.about.moduleNames = [];
-		        }
-			});
-			
-			request.get('https://ivle.nus.edu.sg/api/Lapi.svc/Modules?APIKey=JWE5l4plZpPkhqENrgaVx&AuthToken='+session.token+'&Duration=0&IncludeAllInfo=false',function(error,response,body){
-         	  if(error){
-         	  	session.send('error');
-		       	console.log(error);
-		       } else{
-		            console.log(JSON.parse(response.body).Results);
-		            session.userData.about.modules.concat(JSON.parse(JSON.parse(response.body).Results));
-		            session.send("modules %s", (session.userData.about.modules).toString());
-		            
-		            //for(var i=0;i<session.userData.about.modules.length;++i){
-		           // 	session.userData.about.moduleNames.push(session.userData.about.modules[i].CourseCode);
-		            //}
+
 		        }
 			});
 
-			
         }
         else {
         	session.send("Hey %s! I'm the NUSTalkBot. Type something.", session.userData.about.name);

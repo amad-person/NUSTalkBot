@@ -16,8 +16,8 @@ module.exports = function () {
          	  if(error){
 		       	console.log(error);
 		       } else{
-		            session.userData.about.name = response.data;
-		            console.log(response.data);
+		            console.log(response.body);
+		            session.userData.about.name = response.body;
 		        }
 			});
         }

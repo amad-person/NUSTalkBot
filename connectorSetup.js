@@ -16,6 +16,28 @@ module.exports = function () {
     // bot declaration
     global.bot = new builder.UniversalBot(connector, function (session) {
         session.userData.about = {};
+        session.userData.about = {
+            'name': "Aadyaa",
+            'moduleNames': ["CS1020", "CS2100", "GER1000"],
+            // TODO: use IVLE data, currently using default data here
+            'modules': {
+                'CS1020': {
+                },
+                'CS2100': {
+                },
+                'GER1000': {
+                }
+            },
+            'moduleQueries': {
+                'CS1020': {
+                },
+                'CS2100': {
+                },
+                'GER1000': {
+                }
+            }
+        };
+
         session.save();
 
         // TODO: replace URLs to IVLE compatible ones by using User.getToken(). Data is obtained from NUSMods here.

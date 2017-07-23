@@ -3,7 +3,7 @@ module.exports = function () {
     	var IVLEToken= builder.EntityRecognizer.findEntity(args.intent.entities, 'IVLEtoken');
    		if (IVLEToken) {
             session.token = IVLEToken.entity;
-			session.send(session.token);
+			//session.send(session.token);
 
 			
 			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token,function(error,response,body){
@@ -23,6 +23,7 @@ module.exports = function () {
 			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/Modules?APIKey=JWE5l4plZpPkhqENrgaVx&AuthToken='+ session.token+'&Duration=0&IncludeAllInfo=false',function(error,response,body){
          	  if(error){
 		       	console.log(error);
+		       	session.send('error');
 		       } else{
 		            console.log(JSON.parse(response.body).Results);
 		            session.userData.about.modules = JSON.parse(JSON.parse(response.body).Results);

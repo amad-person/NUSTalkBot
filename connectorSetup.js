@@ -22,14 +22,14 @@ module.exports = function () {
             'name': "Aadyaa Maddi",
             'moduleNames': ["CS1020", "CS2100", "GER1000"],
             // TODO: use IVLE data, currently using default data here
-            'modules': [
+            'modules': {
                 'CS1020': {
                 },
                 'CS2100': {
                 },
                 'GER1000': {
                 }
-            ],
+            },
             'moduleQueries': {
                 'CS1020': {
                 },

@@ -1,7 +1,7 @@
 module.exports = function () {
     bot.dialog('greetingDialog', function (session, args) {
     	var IVLEToken= builder.EntityRecognizer.findEntity(args.intent.entities, 'IVLEtoken');
-   		if (IVLEtoken) {
+   		if (IVLEToken) {
             session.userData.token = IVLEToken.entity;
 			session.send(session.userData.token);
         }

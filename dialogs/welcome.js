@@ -1,5 +1,5 @@
 module.exports = function () {
-    bot.dialog('welcomeDialog', function (session, args) {
+    bot.dialog('welcomeDialog', function (session) {
         session.sendTyping();
 		
         session.send("%s, I have some information for you.", session.userData.about.name);

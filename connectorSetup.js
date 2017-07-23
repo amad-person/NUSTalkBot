@@ -5,6 +5,7 @@ module.exports = function () {
     global.request = require('request');
     global.async = require('async');
     global.google = require('google');
+    global.http = require('http');
     require('dotenv').load(); // to load environment variables
 
     // create chat connector for communicating bot framework service
@@ -18,7 +19,6 @@ module.exports = function () {
         session.userData.about = {};
         session.token="";
         session.userData.about = {
-            'token': "",
             'name': "Aadyaa",
             'moduleNames': ["CS1020", "CS2100", "GER1000"],
             // TODO: use IVLE data, currently using default data here

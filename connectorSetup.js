@@ -20,7 +20,7 @@ module.exports = function () {
         session.token="";
         session.userData.about = {
             'name': "Aadyaa Maddi",
-            'moduleNames': [],
+            'moduleNames': ['ABC'],
             // TODO: use IVLE data, currently using default data here
             'modules': [],
             'moduleQueries': {

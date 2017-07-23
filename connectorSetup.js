@@ -22,15 +22,8 @@ module.exports = function () {
             'name': "Aadyaa Maddi",
             'moduleNames': ['ABC'],
             // TODO: use IVLE data, currently using default data here
-            'modules': [],
-            'moduleQueries': {
-                'CS1020': {
-                },
-                'CS2100': {
-                },
-                'GER1000': {
-                }
-            }
+            'modules': {},
+            'moduleQueries': {}
         };
 
         session.save();

@@ -13,6 +13,7 @@ module.exports = function () {
 		            console.log(JSON.parse(response.body));
 		            var name = JSON.parse(response.body);
 		            session.userData.about.name = name.substring(0, name.indexOf(" "));
+		            session.userData.about.moduleNames = [];
 		        }
 			});
 			

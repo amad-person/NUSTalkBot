@@ -6,7 +6,7 @@ module.exports = function () {
 			session.send(session.token);
 
 			
-			request.get('https://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token,function(error,response,body){
+			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token,function(error,response,body){
          	  if(error){
          	  	session.send('error');
 		       	console.log(error);

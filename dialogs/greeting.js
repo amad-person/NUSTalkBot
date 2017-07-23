@@ -3,25 +3,31 @@ module.exports = function () {
     	var IVLEToken= builder.EntityRecognizer.findEntity(args.intent.entities, 'IVLEtoken');
    		if (IVLEToken) {
             session.token = IVLEToken.entity;
-			session.send(session.token);
-			/*
-			http.get('http://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token, { cache: true })
-				.(function(result){
-					console.log(result);
-					session.userData.about.name = result.data;
-					session.send(session.userData.about.name);
-			});
-			*/
+			//session.send(session.token);
+
+			
 			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token,function(error,response,body){
          	  if(error){
 		       	console.log(error);
 		       } else{
-		            console.log(response.body);
-		            session.userData.about.name = response.body;
-					session.send("Hey %s! I'm the NUSTalkBot. Type something.", session.userData.about.name);
+		            console.log(JSON.parse(response.body));
+		            session.userData.about.name = JSON.parse(response.body);
+					session.send("Hey %s! I'm the NUSTalkBot. Type something.", session.userData.about.name.substring(0, session.userData.about.name.indexOf(" ")));
         			session.send("If you're using this for the first time or want to see the welcome message again, type \'start\'.");
 		        }
 			});
+			
+
+			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/Modules?APIKey=JWE5l4plZpPkhqENrgaVx&AuthToken='+ session.token+'&Duration=0&IncludeAllInfo=false',function(error,response,body){
+         	  if(error){
+		       	console.log(error);
+		       } else{
+		            console.log(response.body.Results);
+		            session.userData.about.modules = JSON.parse(response.body.Results);
+		            session.send(session.userData.about.modules);
+				}
+			});
+			
         }
     }).triggerAction({
          matches: 'Greeting'

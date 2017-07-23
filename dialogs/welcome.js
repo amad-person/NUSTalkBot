@@ -2,8 +2,7 @@ module.exports = function () {
     bot.dialog('welcomeDialog', function (session, args) {
         session.sendTyping();
 
-   		var n = builder.EntityRecognizer(args.intent.entities, 'IVLEtoken')
-   		alert(n);
+   		var n = builder.EntityRecognizer.findEntity(args.intent.entities, 'IVLEtoken')
    		session.send(n);
         session.send("%s, I have some information for you.", session.userData.about.name);
         session.send("Modules you've taken for this semester: %s", session.userData.about.moduleNames.toString());

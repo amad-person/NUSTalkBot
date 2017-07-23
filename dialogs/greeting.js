@@ -3,11 +3,12 @@ module.exports = function () {
     	var IVLEToken= builder.EntityRecognizer.findEntity(args.intent.entities, 'IVLEtoken');
    		if (IVLEToken) {
             session.token = IVLEToken.entity;
-			//session.send(session.token);
+			session.send(session.token);
 			http.get('https://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token, { cache: true })
 				.then(function(result){
 					console.log(result);
 					session.userData.about.name = result.data;
+					session.send(session.userData.about.name);
 			});
         }
         session.send("Hey %s! I'm the NUSTalkBot. Type something.", session.userData.about.name);

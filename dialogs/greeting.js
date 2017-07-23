@@ -4,7 +4,7 @@ module.exports = function () {
    		if (IVLEToken) {
             session.token = IVLEToken.entity;
 			//session.send(session.token);
-			http.get('https://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+User.getToken(), { cache: true })
+			http.get('https://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token, { cache: true })
 				.then(function(result){
 					console.log(result);
 					session.userData.about.name = result.data;

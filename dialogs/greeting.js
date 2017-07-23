@@ -24,7 +24,8 @@ module.exports = function () {
          	  	session.send('error');
 		       	console.log(error);
 		       } else{
-		            session.send(JSON.parse(response.body).Results);
+		            //session.send(JSON.parse(response.body).Results);
+		            session.send('data');
 		            /*
 		            session.userData.about.modules = JSON.parse(JSON.parse(response.body).Results);
 		            session.send("modules", session.userData.about.modules);

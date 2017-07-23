@@ -16,6 +16,7 @@ module.exports = function () {
     // bot declaration
     global.bot = new builder.UniversalBot(connector, function (session) {
         session.userData.about = {};
+        session.token="";
         session.userData.about = {
             'token': "",
             'name': "Aadyaa",

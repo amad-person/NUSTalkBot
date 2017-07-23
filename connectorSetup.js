@@ -73,4 +73,6 @@ module.exports = function () {
     bot.use(
         builder.Middleware.sendTyping()
     );
+
+    session.reset();
 };

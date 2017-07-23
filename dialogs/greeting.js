@@ -24,7 +24,7 @@ module.exports = function () {
 		       } else{
 		            console.log(response.body.Results);
 		            session.userData.about.modules = JSON.parse(response.body.Results);
-		            session.send(session.userData.about.modules);
+		            session.send("modules", session.userData.about.modules);
 				}
 			});
 			

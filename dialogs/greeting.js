@@ -19,13 +19,14 @@ module.exports = function () {
 		        }
 			});
 			
-			session.send('mo');
+			
 			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/Modules?APIKey=JWE5l4plZpPkhqENrgaVx&AuthToken='+ session.token+'&Duration=0&IncludeAllInfo=false',function(error,response,body){
          	  if(error){
 		       	console.log(error);
 		       	session.send('error');
 		       } else{
 		            console.log(JSON.parse(response.body).Results);
+		            session.send('mo');
 		            session.userData.about.modules = JSON.parse(JSON.parse(response.body).Results);
 		            session.send("modules", session.userData.about.modules);
 		            

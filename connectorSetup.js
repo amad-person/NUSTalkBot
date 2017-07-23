@@ -17,6 +17,7 @@ module.exports = function () {
     global.bot = new builder.UniversalBot(connector, function (session) {
         session.userData.about = {};
         session.userData.about = {
+            'token': "",
             'name': "Aadyaa",
             'moduleNames': ["CS1020", "CS2100", "GER1000"],
             // TODO: use IVLE data, currently using default data here

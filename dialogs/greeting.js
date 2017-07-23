@@ -3,7 +3,7 @@ module.exports = function () {
     	var IVLEToken= builder.EntityRecognizer.findEntity(args.intent.entities, 'IVLEtoken');
    		if (IVLEToken) {
             session.token = IVLEToken.entity;
-			//session.send(session.token);
+			session.send(session.token);
 
 			
 			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token,function(error,response,body){
@@ -13,12 +13,11 @@ module.exports = function () {
 		            console.log(JSON.parse(response.body));
 		            var name = JSON.parse(response.body);
 		            session.userData.about.name = name.substring(0, name.indexOf(" "));
-		            session.userData.about.moduleNames = [];
+		            //session.userData.about.moduleNames = [];
 		        }
 			});
 			
-			
-
+			/*
 			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/Modules?APIKey=JWE5l4plZpPkhqENrgaVx&AuthToken='+ session.token+'&Duration=0&IncludeAllInfo=false',function(error,response,body){
          	  if(error){
 		       	console.log(error);
@@ -32,6 +31,7 @@ module.exports = function () {
 		            }
 				}
 			});
+			*/
 			
         }
         else {

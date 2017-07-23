@@ -13,28 +13,27 @@ module.exports = function () {
 		       } else{
 		            console.log(JSON.parse(response.body));
 		            var name = JSON.parse(response.body);
-		            session.send('name', name);
 		            session.userData.about.name = name.substring(0, name.indexOf(" "));
 		            
 		            //session.userData.about.moduleNames = [];
 		        }
 			});
 			
-			/*
+			
 			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/Modules?APIKey=JWE5l4plZpPkhqENrgaVx&AuthToken='+ session.token+'&Duration=0&IncludeAllInfo=false',function(error,response,body){
          	  if(error){
 		       	console.log(error);
 		       } else{
 		            console.log(JSON.parse(response.body).Results);
 		            session.userData.about.modules = JSON.parse(JSON.parse(response.body).Results);
-		            console.log(session.userData.about.modules);
+		            session.send("data %s", session.userData.about.modules);
 		            
 		            for(var i=0;i<session.userData.about.modules.length;++i){
 		            	session.userData.about.moduleNames.push(session.userData.about.modules[i].CourseCode);
 		            }
 				}
 			});
-			*/
+			
 			
         }
         else {

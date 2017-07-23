@@ -24,15 +24,14 @@ module.exports = function () {
          	  	session.send('error');
 		       	console.log(error);
 		       } else{
-		            //session.send(JSON.parse(response.body).Results);
-		            session.send('data');
-		            /*
-		            session.userData.about.modules = JSON.parse(JSON.parse(response.body).Results);
-		            session.send("modules", session.userData.about.modules);
+		            console.log(JSON.parse(response.body).Results);
+		            session.send("modules %s", (JSON.parse(response.body).Results).toString());
+		            session.userData.about.modules.concat(JSON.parse(JSON.parse(response.body).Results));
+		            session.send("modules %s", session.userData.about.modules.toString());
 		            
-		            for(var i=0;i<session.userData.about.modules.length;++i){
-		            	session.userData.about.moduleNames.push(session.userData.about.modules[i].CourseCode);
-		            }*/
+		            //for(var i=0;i<session.userData.about.modules.length;++i){
+		           // 	session.userData.about.moduleNames.push(session.userData.about.modules[i].CourseCode);
+		            //}
 		        }
 			});
 

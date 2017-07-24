@@ -32,7 +32,7 @@ module.exports = function () {
         };
 
 
-        // session.save();
+        session.save();
 
         // TODO: replace URLs to IVLE compatible ones by using User.getToken(). Data is obtained from NUSMods here.
         // https://wiki.nus.edu.sg/display/ivlelapi/Timetable

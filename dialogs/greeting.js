@@ -15,14 +15,15 @@ module.exports = function () {
 		            console.log(session.userData.name);
 		            var name = JSON.parse(response.body);
 		            session.userData.name = name.substring(0, name.indexOf(" "));
-		            console.log(session.userData.name);
+		            session.send(session.userData.name);
+		            session.save();
 
 		        }
 			});
 
         }
         else {
-        	session.send("Hey %s! I'm the NUSTalkBot. Type something.", session.userData.about.name);
+        	session.send("Hey %s! I'm the NUSTalkBot. Type something.", session.userData.name);
         	session.send("If you're using this for the first time or want to see the welcome message again, type \'start\'.");
         }
     }).triggerAction({

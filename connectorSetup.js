@@ -20,18 +20,11 @@ module.exports = function () {
         // session.token="";
         session.userData.name = "AB";
         session.userData.modules = [];
-        session.userData.moduleNames =["CS1020", "CS2100", "GER1000"];
+        session.userData.moduleNames =[];
         console.log("test");
         session.userData.moduleQueries = {
-                'CS1020': {
-                },
-                'CS2100': {
-                },
-                'GER1000': {
-                }
         };
-
-
+        
         session.save();
 
         // TODO: replace URLs to IVLE compatible ones by using User.getToken(). Data is obtained from NUSMods here.

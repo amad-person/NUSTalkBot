@@ -6,20 +6,40 @@ module.exports = function () {
 			//session.send(session.token);
 
 			//getting username
-			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token,function(error,response,body){
+			request.get('http://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token, function(error,response,body){
          	  if(error){
-         	  	session.send('error');
 		       	console.log(error);
 		       } else{
 		            console.log(JSON.parse(response.body));
 		            console.log(session.userData.name);
 		            var name = JSON.parse(response.body);
-		            session.userData.name = name.substring(0, name.indexOf(" "));
-		            session.send(session.userData.name);
+		            session.userData.name = name;
 		            session.save();
 
 		        }
 			});
+            request.get('http://ivle.nus.edu.sg/api/Lapi.svc/Modules?APIKey=JWE5l4plZpPkhqENrgaVx&AuthToken='+ session.token + '&Duration=0&IncludeAllInfo=false', function(error,response,body){
+                if(error){
+                    console.log(error);
+                } else{
+                    var modules = JSON.parse(response.body).Results;
+                    session.userData.modules = modules;
+                    console.log(session.userData.modules);
+                    session.save();
+
+                    var moduleNames = [];
+
+                    for(var i = 0; i < Object.keys(modules).length; i++) {
+                    	moduleNames.push(modules[i].CourseCode);
+					}
+
+					session.userData.moduleNames = moduleNames;
+
+					console.log(session.userData.moduleNames.toString());
+
+					session.save();
+                }
+            });
 
         }
         else {

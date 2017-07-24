@@ -1,7 +1,7 @@
 module.exports = function () {
     bot.dialog('askDialog', [
         function (session) {
-            builder.Prompts.choice(session, "Choose a module:", session.userData.about.moduleNames, builder.ListStyle.button);
+            builder.Prompts.choice(session, "Choose a module:", session.userData.moduleNames, builder.ListStyle.button);
         },
         function(session, results) {
             session.sendTyping();
@@ -46,7 +46,7 @@ module.exports = function () {
             if(!doesQueryExistFunc(session, searchQuery, session.dialogData.currModule)) {
                 // if query doesn't already exist, make a new search
                 session.dialogData.linksObj = doSearch(session, searchQuery);
-                session.userData.about.moduleQueries[session.dialogData.currModule][searchQuery] = session.dialogData.linksObj;
+                session.userData.moduleQueries[session.dialogData.currModule][searchQuery] = session.dialogData.linksObj;
             } else {
                 // query exists
                 session.dialogData.linksObj = getExistingLinks(session, searchQuery, session.dialogData.currModule);
@@ -102,11 +102,11 @@ module.exports = function () {
     }
 
     function doesQueryExistFunc(session, searchQuery, currModule) {
-        return (searchQuery in session.userData.about.moduleQueries[currModule]);
+        return (searchQuery in session.userData.moduleQueries[currModule]);
     }
 
     function getExistingLinks(session, searchQuery, currModule) {
-        return session.userData.about.moduleQueries[currModule][searchQuery];
+        return session.userData.moduleQueries[currModule][searchQuery];
     }
 
     // create hero card to display results of search query
@@ -123,7 +123,7 @@ module.exports = function () {
     // if links become 0 then delete the searchQuery
     function deleteLink(session, currModule, searchQuery) {
         if(Object.keys(session.dialogData.linksObj).length === 0) {
-            delete session.userData.about.moduleQueries[currModule][searchQuery];
+            delete session.userData.moduleQueries[currModule][searchQuery];
         } else {
             session.dialogData.linksObj.splice(0, 1);
         }

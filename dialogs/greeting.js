@@ -12,8 +12,10 @@ module.exports = function () {
 		       	console.log(error);
 		       } else{
 		            console.log(JSON.parse(response.body));
+		            console.log(session.userData.name);
 		            var name = JSON.parse(response.body);
-		            session.userData.about.name = name.substring(0, name.indexOf(" "));
+		            session.userData.name = name.substring(0, name.indexOf(" "));
+		            console.log(session.userData.name);
 
 		        }
 			});

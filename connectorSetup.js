@@ -16,18 +16,17 @@ module.exports = function () {
 
     // bot declaration
     global.bot = new builder.UniversalBot(connector, function (session) {
-        session.userData.about = {};
-        // session.token="";
-        session.userData.name = "AB";
-        session.userData.modules = [];
+
+        session.userData.token = "";
+        session.userData.name = "default";
         session.userData.moduleNames =[];
-        console.log("test");
-        session.userData.moduleQueries = {
-        };
-        
+        session.userData.modules = [];
+        session.userData.moduleQueries = {};
+        session.userData.timetable = {};
+
         session.save();
 
-        // TODO: replace URLs to IVLE compatible ones by using User.getToken(). Data is obtained from NUSMods here.
+        // data is obtained from NUSMods here.
         // https://wiki.nus.edu.sg/display/ivlelapi/Timetable
         // https://wiki.nus.edu.sg/display/ivlelapi/Module
 

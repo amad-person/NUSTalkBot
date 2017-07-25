@@ -7,20 +7,22 @@ module.exports = function () {
             session.sendTyping();
             if(results.response) {
                 session.dialogData.currModule = results.response.entity;
-                var promptText = "You chose " + results.response.entity + ". Ask me a question.";
+                session.save();
+                var promptText = "You chose " + session.dialogData.currModule + ". Ask me a question.";
                 builder.Prompts.text(session, promptText);
             }
         },
         function(session, results) {
             session.sendTyping();
             if(results.response) {
+                session.sendTyping();
                 session.beginDialog('queryDialog', results.response);
             }
         },
         function(session, results) {
             // after user comes out of query dialog
             if(results.response.entity) {
-                builder.Prompts.choice(session, "I knew it. I truly am awesome. Do you have another question?", "Yes|No", builder.ListStyle.button);
+                builder.Prompts.choice(session, "I knew I could do it. Do you have another question?", "Yes|No", builder.ListStyle.button);
             } else {
                 builder.Prompts.choice(session, "Sorry...do you want to try again?", "Yes|No", builder.ListStyle.button);
             }
@@ -41,15 +43,18 @@ module.exports = function () {
 
     bot.dialog('queryDialog', [
         function(session, args) {
-            var searchQuery = args, currLink;
+            var searchQuery = args, currLink, currModule = session.dialogData.currModule;
             session.dialogData.searchQuery = searchQuery;
-            if(!doesQueryExistFunc(session, searchQuery, session.dialogData.currModule)) {
+            if(!doesQueryExistFunc(session, searchQuery, currModule)) {
                 // if query doesn't already exist, make a new search
                 session.dialogData.linksObj = doSearch(session, searchQuery);
-                session.userData.moduleQueries[session.dialogData.currModule][searchQuery] = session.dialogData.linksObj;
+                session.save();
+                session.userData.moduleQueries[currModule][searchQuery] = session.dialogData.linksObj;
+                session.save();
             } else {
                 // query exists
-                session.dialogData.linksObj = getExistingLinks(session, searchQuery, session.dialogData.currModule);
+                session.dialogData.linksObj = getExistingLinks(session, searchQuery, currModule);
+                session.save();
             }
 
             // get first link
@@ -57,6 +62,7 @@ module.exports = function () {
 
             // show link card
             session.dialogData.currentLink = currLink;
+            session.save();
             var card = createLinkCard(session, currLink);
             var msg = new builder.Message(session).addAttachment(card);
             session.send(msg);
@@ -77,11 +83,12 @@ module.exports = function () {
                     break;
             }
 
+            session.save();
             session.endDialogWithResult(session.dialogData.success);
         }
     ]);
 
-    function doSearch(searchQuery) {
+    function doSearch(session, searchQuery) {
         var linksObj = {};
         google.resultsPerPage = 21; // get the first 20 links
         google(searchQuery,
@@ -102,11 +109,14 @@ module.exports = function () {
     }
 
     function doesQueryExistFunc(session, searchQuery, currModule) {
-        return (searchQuery in session.userData.moduleQueries[currModule]);
+        var currModuleQueries = session.userData.moduleQueries[currModule];
+        return (searchQuery in currModuleQueries);
     }
 
     function getExistingLinks(session, searchQuery, currModule) {
-        return session.userData.moduleQueries[currModule][searchQuery];
+        var currModuleQueries = session.userData.moduleQueries[currModule];
+        console.log(Object.keys(currModuleQueries));
+        return currModuleQueries[searchQuery];
     }
 
     // create hero card to display results of search query
@@ -127,6 +137,7 @@ module.exports = function () {
         } else {
             session.dialogData.linksObj.splice(0, 1);
         }
+        session.save();
     }
 };
 

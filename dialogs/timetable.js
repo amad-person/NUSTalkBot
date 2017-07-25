@@ -17,4 +17,17 @@ module.exports = function () {
     ]).triggerAction({
         matches: 'Timetable'
     }).beginDialogAction('timetableHelp', 'helpDialog', { matches: 'Help'});
+
+    function getCurrDayCode(session, date) {
+
+        return dayCode;
+    }
+    function getCurrWeekCode(session, date) {
+        return weekCode
+    }
+
+    function getTimetable(session) {
+        var timetable = {};
+        return timetable;
+    }
 };

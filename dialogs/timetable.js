@@ -19,7 +19,6 @@ module.exports = function () {
     }).beginDialogAction('timetableHelp', 'helpDialog', { matches: 'Help'});
 
     function getCurrDayCode(session, date) {
-
         return dayCode;
     }
     function getCurrWeekCode(session, date) {
@@ -27,7 +26,29 @@ module.exports = function () {
     }
 
     function getTimetable(session) {
-        var timetable = {};
+        var timetable = [
+            {
+                'day': "Monday"
+            },
+            {
+                'day': "Tuesday"
+            },
+            {
+                'day': "Wednesday"
+            },
+            {
+                'day': "Thursday"
+            },
+            {
+                'day': "Friday"
+            },
+            {
+                'day': "Saturday"
+            },
+            {
+                'day': "Sunday"
+            }
+        ];
         return timetable;
     }
 };

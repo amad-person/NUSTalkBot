@@ -6,9 +6,9 @@ module.exports = function () {
         function(session, results) {
             session.sendTyping();
             if(results.response) {
-                session.dialogData.currModule = results.response.entity;
+                session.userData.currModule = results.response.entity;
                 session.save();
-                var promptText = "You chose " + session.dialogData.currModule + ". Ask me a question.";
+                var promptText = "You chose " + session.userData.currModule + ". Ask me a question.";
                 builder.Prompts.text(session, promptText);
             }
         },
@@ -33,6 +33,7 @@ module.exports = function () {
                     session.beginDialog('askDialog');
                     break;
                 case "no":
+                    // redirect prompt 'do you want to ask a friend or a tutor'
                     session.endDialog("Okay, see you!");
                     break;
             }
@@ -43,25 +44,29 @@ module.exports = function () {
 
     bot.dialog('queryDialog', [
         function(session, args) {
-            var searchQuery = args, currLink, currModule = session.dialogData.currModule;
-            session.dialogData.searchQuery = searchQuery;
-            if(!doesQueryExistFunc(session, searchQuery, currModule)) {
+            var searchQuery = args.toString(), currLink = {}, currModule = session.userData.currModule;
+            session.userData.searchQuery = searchQuery;
+            session.save();
+
+            if(!doesQueryExist(session, searchQuery, currModule)) {
                 // if query doesn't already exist, make a new search
-                session.dialogData.linksObj = doSearch(session, searchQuery);
+                console.log(doesQueryExist(session, searchQuery, currModule));
+                session.userData.linksObj = doSearch(session, searchQuery);
                 session.save();
-                session.userData.moduleQueries[currModule][searchQuery] = session.dialogData.linksObj;
+                session.userData.moduleQueries[currModule][searchQuery] = session.userData.linksObj;
                 session.save();
             } else {
                 // query exists
-                session.dialogData.linksObj = getExistingLinks(session, searchQuery, currModule);
+                session.userData.linksObj = getExistingLinks(session, searchQuery, currModule);
                 session.save();
             }
 
             // get first link
-            currLink = session.dialogData.linksObj[0];
+            currLink = session.userData.linksObj[0];
+            // console.log("current link", currLink);
 
             // show link card
-            session.dialogData.currentLink = currLink;
+            session.userData.currentLink = currLink;
             session.save();
             var card = createLinkCard(session, currLink);
             var msg = new builder.Message(session).addAttachment(card);
@@ -71,26 +76,25 @@ module.exports = function () {
             builder.Prompts.choice(session, "Was the link helpful?", "Yes|No", builder.ListStyle.button);
         },
         function (session, results) {
-            session.dialogData.success = false;
+            session.userData.success = false;
             switch (results.response.entity.toLowerCase()) {
                 case "yes":
-                    session.dialogData.currLink.helpful = true;
-                    session.dialogData.success = true;
+                    session.userData.currLink.helpful = true;
+                    session.userData.success = true;
                     break;
                 case "no":
-                    session.dialogData.success = false;
-                    deleteLink(session, session.dialogData.currModule, session.dialogData.searchQuery);
+                    session.userData.success = false;
+                    deleteLink(session, session.userData.currModule, session.userData.searchQuery);
                     break;
             }
-
             session.save();
-            session.endDialogWithResult(session.dialogData.success);
+            session.endDialogWithResult(session.userData.success);
         }
     ]);
 
     function doSearch(session, searchQuery) {
-        var linksObj = {};
-        google.resultsPerPage = 21; // get the first 20 links
+        var linksObj = [];
+        google.resultsPerPage = 20; // get the first 20 links
         google(searchQuery,
             function (err, res) {
                 if(err) {
@@ -98,24 +102,28 @@ module.exports = function () {
                 }
 
                 res.links.splice(0, 1); // remove null object at index 0
-                linksObj = res.links;
+                linksObj = JSON.parse(JSON.stringify(res.links));
+                console.log(linksObj);
+                // console.log(res.links);
             });
 
         for(var i = 0; i < Object.keys(linksObj).length; i++) {
             linksObj[i].helpful = false;
         }
-
+        // console.log(linksObj);
+        console.log("link", linksObj);
         return linksObj;
     }
 
-    function doesQueryExistFunc(session, searchQuery, currModule) {
+    function doesQueryExist(session, searchQuery, currModule) {
         var currModuleQueries = session.userData.moduleQueries[currModule];
+        console.log(session.userData.moduleQueries);
         return (searchQuery in currModuleQueries);
     }
 
     function getExistingLinks(session, searchQuery, currModule) {
         var currModuleQueries = session.userData.moduleQueries[currModule];
-        console.log(Object.keys(currModuleQueries));
+        // console.log(Object.keys(currModuleQueries));
         return currModuleQueries[searchQuery];
     }
 
@@ -132,10 +140,10 @@ module.exports = function () {
     // delete link if not helpful
     // if links become 0 then delete the searchQuery
     function deleteLink(session, currModule, searchQuery) {
-        if(Object.keys(session.dialogData.linksObj).length === 0) {
+        if(Object.keys(session.userData.linksObj).length === 0) {
             delete session.userData.moduleQueries[currModule][searchQuery];
         } else {
-            session.dialogData.linksObj.splice(0, 1);
+            session.userData.linksObj.splice(0, 1);
         }
         session.save();
     }

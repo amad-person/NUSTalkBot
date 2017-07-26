@@ -2,11 +2,11 @@ module.exports = function () {
     bot.dialog('greetingDialog', function (session, args) {
         var IVLEToken= builder.EntityRecognizer.findEntity(args.intent.entities, 'IVLEtoken');
         if (IVLEToken) {
-            session.token = IVLEToken.entity;
+            session.userData.token = IVLEToken.entity;
             //session.send(session.token);
 
             //getting username
-            request.get('http://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.token, function(error,response,body){
+            request.get('http://ivle.nus.edu.sg/api/Lapi.svc/UserName_Get?APIKey=JWE5l4plZpPkhqENrgaVx&Token='+ session.userData.token, function(error,response,body){
                 if(error){
                     console.log(error);
                 } else{
@@ -20,7 +20,7 @@ module.exports = function () {
             });
 
             // getting list of modules
-            request.get('http://ivle.nus.edu.sg/api/Lapi.svc/Modules?APIKey=JWE5l4plZpPkhqENrgaVx&AuthToken='+ session.token + '&Duration=0&IncludeAllInfo=false', function(error,response,body){
+            request.get('http://ivle.nus.edu.sg/api/Lapi.svc/Modules?APIKey=JWE5l4plZpPkhqENrgaVx&AuthToken='+ session.userData.token + '&Duration=0&IncludeAllInfo=false', function(error,response,body){
                 if(error){
                     console.log(error);
                 } else{
@@ -36,6 +36,8 @@ module.exports = function () {
                     }
 
                     session.userData.moduleNames = moduleNames;
+                    session.save();
+
                     // console.log(session.userData.moduleNames.toString());
                     for(var j = 0; j < Object.keys(moduleNames).length; j++) {
                         moduleQueries[session.userData.moduleNames[j]] = {
@@ -45,12 +47,12 @@ module.exports = function () {
 
                     session.userData.moduleQueries = moduleQueries;
                     session.save();
-                    // console.log(Object.keys(session.userData.moduleQueries));
+                    // console.log(session.userData.moduleQueries);
                 }
             });
 
             // getting timetable
-            request.get('http://ivle.nus.edu.sg/api/Lapi.svc/Timetable_Student?APIKey=JWE5l4plZpPkhqENrgaVx&AuthToken=' + session.token + '&AcadYear=2017/2018&Semester=1', function(error,response,body){
+            request.get('http://ivle.nus.edu.sg/api/Lapi.svc/Timetable_Student?APIKey=JWE5l4plZpPkhqENrgaVx&AuthToken=' + session.userData.token + '&AcadYear=2017/2018&Semester=1', function(error,response,body){
                 if(error){
                     console.log(error);
                 } else{

@@ -1,6 +1,6 @@
 module.exports = function () {
     bot.dialog('greetingDialog', function (session, args) {
-        var IVLEToken= builder.EntityRecognizer.findEntity(args.intent.entities, 'IVLEtoken');
+        var IVLEToken = builder.EntityRecognizer.findEntity(args.intent.entities, 'IVLEtoken');
         if (IVLEToken) {
             session.userData.token = IVLEToken.entity;
             //session.send(session.token);
@@ -57,12 +57,14 @@ module.exports = function () {
                     console.log(error);
                 } else{
                     // console.log(JSON.parse(response.body).Results);
-                    var timetable = JSON.parse(response.body).Results;
-                    session.userData.timetable = timetable;
+                    var timetableRaw = JSON.parse(response.body).Results;
+                    session.userData.timetableRaw = timetableRaw;
                     session.save();
-
                 }
             });
+
+            session.userData.timetable = getFinalTimetable(timetableRaw);
+            session.save();
 
         }
         else {
@@ -72,4 +74,49 @@ module.exports = function () {
     }).triggerAction({
         matches: 'Greeting'
     });
+
+    function getFinalTimetable(timetableRaw) {
+        var mon = [];
+        var tue = [];
+        var wed = [];
+        var thurs = [];
+        var fri = [];
+        var sat = [];
+        var sun = [];
+
+        for(var k = 0; k < timetableRaw.length; k++) {
+            var obj = timetableRaw[k];
+            switch (obj.DayCode) {
+                case 0:
+                    mon.push(obj);
+                    break;
+                case 1:
+                    tue.push(obj);
+                    break;
+                case 2:
+                    wed.push(obj);
+                    break;
+                case 3:
+                    thurs.push(obj);
+                    break;
+                case 4:
+                    fri.push(obj);
+                    break;
+                case 5:
+                    sat.push(obj);
+                    break;
+                case 6:
+                    sun.push(obj);
+                    break;
+                default:
+                    console.log("invalid DayCode");
+                    break;
+            }
+        }
+
+        var timetable = [];
+        timetable.push(mon, tue, wed, thurs, fri, sat, sun);
+        console.log(timetable);
+        return timetable;
+    }
 };

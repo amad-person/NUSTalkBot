@@ -32,12 +32,18 @@ module.exports = function () {
                     }
                 }
             }
-            // builder.Prompts.choice(session, "Was I helpful?", "Yes|No", builder.ListStyle.button);
-        }
-        // function (session, results) {
-        //     switch (results.response.entity) {
-        //     }
-        // }
+            builder.Prompts.choice(session, "Do you want to ask another query", "Yes|No", builder.ListStyle.button);
+        },
+        function (session, results) {
+            switch (results.response.entity.toLowerCase()) {
+                case "yes":
+                    session.beginDialog('timetableDialog');
+                    break;
+                case "no":
+                    session.endDialog("Okay, see you!");
+                    break;
+            }
+         }
     ]).triggerAction({
         matches: 'Timetable'
     }).beginDialogAction('timetableHelp', 'helpDialog', { matches: 'Help'});

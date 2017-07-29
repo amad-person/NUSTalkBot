@@ -15,12 +15,11 @@ module.exports = function () {
             for(var searchQuery = 0; searchQuery < Object.keys(moduleQueries[module]).length; searchQuery++) {
                 for(var link = 0; link < Object.keys(moduleQueries[module][searchQuery]).length; link++) {
                     if(moduleQueries[module][searchQuery][link].helpful === true) {
-                        historyStr = historyStr + moduleQueries[module][searchQuery][link].href + "  \n"
+                        historyStr = historyStr + moduleQueries[module][searchQuery][link].href + "</br>"
                     }
                 }
             }
         }
-
         return historyStr;
     }
 };

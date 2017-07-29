@@ -2,9 +2,8 @@ module.exports = function () {
     bot.dialog('welcomeDialog', function (session) {
         session.sendTyping();
 		
-        session.send("%s, I have some information for you.", session.userData.name);
-        session.send("Modules you've taken for this semester: %s", session.userData.moduleNames.toString());
-        session.send("Commands you can type:  \nask: ask questions after selecting a module  \ntimetable: ask questions related to your lecture schedule  \nhistory: see a list of links you've visited today  \nrestart: restart your conversation");
+        session.send("I have some information for you.");
+        session.send("Commands you can type:</br>ask: ask questions after selecting a module</br>timetable: ask questions related to your lecture schedule</br>history: see a list of links you've visited today</br>restart: restart your conversation");
 
         session.endDialog("That's it. Have fun!");
     }).triggerAction({

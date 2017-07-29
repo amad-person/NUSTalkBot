@@ -56,19 +56,19 @@ module.exports = function () {
                 if(error){
                     console.log(error);
                 } else{
-                    // console.log(JSON.parse(response.body).Results);
-                    var timetableRaw = JSON.parse(response.body).Results;
-                    session.userData.timetableRaw = timetableRaw;
+
+                    session.userData.timetableRaw = JSON.parse(response.body).Results;
                     session.save();
+                    // console.log(session.userData.timetableRaw);
+
+                    session.userData.timetable = getFinalTimetable(session.userData.timetableRaw);
+                    session.save();
+                    console.log(session.userData.timetable);
                 }
             });
-
-            session.userData.timetable = getFinalTimetable(timetableRaw);
-            session.save();
-
         }
         else {
-            session.send("Hey %s! I'm the NUSTalkBot. Type something.", session.userData.name);
+            session.send("Hey %s! I\'m the NUSTalkBot. Type something.", session.userData.name);
             session.send("If you're using this for the first time or want to see the welcome message again, type \'start\'.");
         }
     }).triggerAction({
@@ -87,25 +87,25 @@ module.exports = function () {
         for(var k = 0; k < timetableRaw.length; k++) {
             var obj = timetableRaw[k];
             switch (obj.DayCode) {
-                case 0:
+                case '1':
                     mon.push(obj);
                     break;
-                case 1:
+                case '2':
                     tue.push(obj);
                     break;
-                case 2:
+                case '3':
                     wed.push(obj);
                     break;
-                case 3:
+                case '4':
                     thurs.push(obj);
                     break;
-                case 4:
+                case '5':
                     fri.push(obj);
                     break;
-                case 5:
+                case '6':
                     sat.push(obj);
                     break;
-                case 6:
+                case '7':
                     sun.push(obj);
                     break;
                 default:
@@ -116,7 +116,8 @@ module.exports = function () {
 
         var timetable = [];
         timetable.push(mon, tue, wed, thurs, fri, sat, sun);
-        console.log(timetable);
+        // console.log('in function');
+        // console.log(timetable);
         return timetable;
     }
 };

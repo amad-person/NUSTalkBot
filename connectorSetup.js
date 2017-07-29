@@ -22,6 +22,7 @@ module.exports = function () {
         session.userData.moduleNames =[];
         session.userData.modules = [];
         session.userData.moduleQueries = [];
+        session.userData.timetableRaw = [];
         session.userData.timetable = [];
 
         session.save();

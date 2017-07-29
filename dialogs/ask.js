@@ -44,7 +44,7 @@ module.exports = function () {
 
     bot.dialog('queryDialog', [
         function(session, args) {
-            var searchQuery = args.toString(), currLink = {}, currModule = session.userData.currModule;
+            var searchQuery = args.toString(), currModule = session.userData.currModule;
             session.userData.searchQuery = searchQuery;
             session.save();
 
@@ -62,7 +62,7 @@ module.exports = function () {
             }
 
             // get first link
-            currLink = session.userData.linksObj[0];
+            var currLink = session.userData.linksObj[0];
             // console.log("current link", currLink);
 
             // show link card

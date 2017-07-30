@@ -3,7 +3,6 @@ module.exports = function () {
     global.restify = require('restify');
     global.builder = require('botbuilder');
     glabal.request = require('request');
-    global.requestpromise = require('request-promise');
     global.async = require('async');
     global.google = require('google');
     global.http = require('http');

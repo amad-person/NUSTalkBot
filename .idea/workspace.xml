@@ -2,70 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="979e9719-6f83-470c-ae48-fb021de90549" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/CHANGES.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/asap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/browser-asap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/browser-raw.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/raw.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/build.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/done.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/es6-extensions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/finally.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/node-extensions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/rejection-tracking.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/synchronous.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/index.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/done.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/es6-extensions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/finally.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/node-extensions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/rejection-tracking.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/synchronous.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/polyfill-done.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/polyfill.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/done.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/es6-extensions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/finally.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/node-extensions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/rejection-tracking.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/synchronous.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/core.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/done.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/es6-extensions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/finally.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/node-extensions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/rejection-tracking.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/synchronous.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectorSetup.js" afterPath="$PROJECT_DIR$/connectorSetup.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/ask.js" afterPath="$PROJECT_DIR$/dialogs/ask.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/greeting.js" afterPath="$PROJECT_DIR$/dialogs/greeting.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/help.js" afterPath="$PROJECT_DIR$/dialogs/help.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/history.js" afterPath="$PROJECT_DIR$/dialogs/history.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/restart.js" afterPath="$PROJECT_DIR$/dialogs/restart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/timetable.js" afterPath="$PROJECT_DIR$/dialogs/timetable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/welcome.js" afterPath="$PROJECT_DIR$/dialogs/welcome.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/package.json" afterPath="$PROJECT_DIR$/node_modules/request/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -105,8 +43,8 @@
       <file leaf-file-name="ask.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogs/ask.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1560">
-              <caret line="104" column="15" lean-forward="false" selection-start-line="104" selection-start-column="15" selection-end-line="104" selection-end-column="15" />
+            <state relative-caret-position="1635">
+              <caret line="109" column="31" lean-forward="false" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -117,6 +55,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="greeting.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dialogs/greeting.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -340,12 +288,12 @@
       <workItem from="1500722827476" duration="17000" />
       <workItem from="1500722857231" duration="3756000" />
       <workItem from="1500893952717" duration="13365000" />
-      <workItem from="1501143759942" duration="22812000" />
+      <workItem from="1501143759942" duration="23289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80257000" />
+    <option name="totallyTimeSpent" value="80734000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -746,14 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogs/greeting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="119" column="34" lean-forward="true" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dialogs/timetable.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -770,18 +710,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/dialogs/greeting.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        <state relative-caret-position="-5">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogs/ask.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="104" column="15" lean-forward="false" selection-start-line="104" selection-start-column="15" selection-end-line="104" selection-end-column="15" />
+        <state relative-caret-position="1635">
+          <caret line="109" column="31" lean-forward="false" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
           <folding />
         </state>
       </provider>

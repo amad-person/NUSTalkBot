@@ -51,7 +51,7 @@ module.exports = function () {
             if(!doesQueryExist(session, searchQuery, currModule)) {
                 // if query doesn't already exist, make a new search
 
-                session.userData.linksObj = doSearch(session, searchQuery);
+                doSearch(session, searchQuery);
                 session.save();
                 session.userData.moduleQueries[currModule][searchQuery] = session.userData.linksObj;
                 session.save();
@@ -101,14 +101,14 @@ module.exports = function () {
 
                 res.links.splice(0, 1); // remove null object at index 0
                 linksObj = res.links;
-                console.log('linksObj inside request: ', linksObj);
-            });
 
-        for(var i = 0; i < Object.keys(linksObj).length; i++) {
-            linksObj[i].helpful = false;
-        }
-        console.log('linksObj outside request ', linksObj);
-        return linksObj;
+                for(var i = 0; i < Object.keys(linksObj).length; i++) {
+                    linksObj[i].helpful = false;
+                }
+
+                session.userData.linksObj = linksObj;
+                session.save();
+            });
     }
 
     function doesQueryExist(session, searchQuery, currModule) {

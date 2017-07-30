@@ -17,6 +17,7 @@
     "botbuilder": "^3.9.0",
     "dotenv": "^4.0.0",
     "google": "^2.1.0",
+    "promise": "^7.3.1",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
     "restify": "^5.0.1"

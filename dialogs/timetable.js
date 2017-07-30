@@ -7,25 +7,28 @@ module.exports = function () {
             if(results.response) {
                 var day;
 
-                if(day = builder.EntityRecognizer.findEntity(results.response.entity, 'Date')) {
+                if(day = builder.EntityRecognizer.findEntity(results.response, 'Date')) {
                     day = entityRecognized.entity;
-                    console.log(day);
+                    console.log("entity recognised", day);
                 } else {
                     day = results.response.toString();
                 }
 
+                day = day.toLowerCase().trim();
                 var dayCode = getDayCode(session, day);
 
-                if(dayCode === -1) { // invalid day code
+                if(dayCode === -999) { // invalid day code
                     session.send("I'm sorry, I didn't understand. Try saying something like \'classes [day]\' or \'what do I have on [day]\'");
+                    session.beginDialog('timetableDialog');
                 } else {
                     var currHours = getHours();
                     var daySchedule = session.userData.timetable[dayCode];
+                    console.log(daySchedule);
 
                     if(daySchedule.length > 0) {
-                        if(day.toLowerCase() === 'today' || day.toLowerCase() === 'classes today' || day.toLowerCase() === 'schedule today' || day.toLowerCase() === 'what do i have today') {
+                        var start, end, sTime, eTime, venue = '';
+                        if(dayCode === (new Date().getDay() - 1)) {
                             session.send("Here are your classes for today.");
-                            var start, end, sTime, eTime, venue = '';
                             for(var i = 0; i < Object.keys(daySchedule).length; i++) {
                                 if(daySchedule[i].StartTime >= currHours) {
                                     start = daySchedule[i].StartTime/100;
@@ -59,8 +62,8 @@ module.exports = function () {
                     } else {
                         session.send("Looks like you have no classes.");
                     }
+                    builder.Prompts.choice(session, "Do you want to ask another query", "Yes|No", builder.ListStyle.button);
                 }
-                builder.Prompts.choice(session, "Do you want to ask another query", "Yes|No", builder.ListStyle.button);
             }
         },
         function (session, results) {
@@ -78,23 +81,33 @@ module.exports = function () {
         }
     ]).triggerAction({
         matches: 'Timetable'
-    }).beginDialogAction('timetableHelp', 'helpDialog', { matches: 'Help'});
+    }).beginDialogAction('timetableHelp', 'helpDialog', { matches: 'Help'}).beginDialogAction('restartDialog', { matches: 'Restart'});
 
 
     function getDayCode(session, day) {
-        var currDay = new Date().getDay() - 1; // index starts at 0
+        var currDay = new Date().getDay(); // index starts at 0
 
         // remove unnecessary punctuation
         if(day[day.length - 1]=== '?' || day[day.length - 1] === '.') {
             day = day.substring(0, (day.length - 1));
         }
 
-        switch (day.toLowerCase()) {
+        console.log('query', day);
+
+        switch (day) {
+            case 'classes today':
+            case 'classes now':
+            case 'classes next week':
+            case 'what do i have next week':
+            case 'what do i have today':
+            case 'schedule today':
+                dayCode = currDay;
+                break;
             case 'tomorrow':
             case 'what do i have tomorrow':
             case 'classes tomorrow':
             case 'schedule tomorrow':
-                currDay = (currDay + 1)%7;
+                dayCode = (currDay + 1)%7;
                 break;
             case 'classes day after tomorrow':
             case 'classes two days later':
@@ -104,66 +117,63 @@ module.exports = function () {
             case 'two days later':
             case 'what do i have day after tomorrow':
             case 'what do i have two days later':
-                currDay = (currDay + 2)%7;
-                break;
-            case 'monday':
-            case 'what do i have on monday':
-            case 'what do i have next monday':
-            case 'classes next monday':
-            case 'classes monday':
-                currDay = 0;
-                break;
-            case 'tuesday':
-            case 'what do i have on tuesday':
-            case 'what do i have next tuesday':
-            case 'classes next tuesday':
-            case 'classes tuesday':
-                currDay = 1;
-                break;
-            case 'wednesday':
-            case 'what do i have on wednesday':
-            case 'what do i have next wednesday':
-            case 'classes next wednesday':
-            case 'classes wednesday':
-                currDay = 2;
-                break;
-            case 'thursday':
-            case 'what do i have on thursday':
-            case 'what do i have next thursday':
-            case 'classes next thursday':
-            case 'classes thursday':
-                currDay = 3;
-                break;
-            case 'friday':
-            case 'what do i have on friday':
-            case 'what do i have next friday':
-            case 'classes next friday':
-            case 'classes friday':
-                currDay = 4;
-                break;
-            case 'saturday':
-            case 'what do i have on saturday':
-            case 'what do i have next saturday':
-            case 'classes next saturday':
-            case 'classes saturday':
-                currDay = 5;
+                dayCode = (currDay + 2)%7;
                 break;
             case 'sunday':
             case 'what do i have on sunday':
             case 'what do i have next sunday':
             case 'classes next sunday':
             case 'classes sunday':
-                currDay = 6;
+                dayCode = 0;
                 break;
-            case 'classes next week':
-            case 'what do i have next week':
+            case 'monday':
+            case 'what do i have on monday':
+            case 'what do i have next monday':
+            case 'classes next monday':
+            case 'classes monday':
+                dayCode = 1;
+                break;
+            case 'tuesday':
+            case 'what do i have on tuesday':
+            case 'what do i have next tuesday':
+            case 'classes next tuesday':
+            case 'classes tuesday':
+                dayCode = 2;
+                break;
+            case 'wednesday':
+            case 'what do i have on wednesday':
+            case 'what do i have next wednesday':
+            case 'classes next wednesday':
+            case 'classes wednesday':
+                dayCode = 3;
+                break;
+            case 'thursday':
+            case 'what do i have on thursday':
+            case 'what do i have next thursday':
+            case 'classes next thursday':
+            case 'classes thursday':
+                dayCode = 4;
+                break;
+            case 'friday':
+            case 'what do i have on friday':
+            case 'what do i have next friday':
+            case 'classes next friday':
+            case 'classes friday':
+                dayCode = 5;
+                break;
+            case 'saturday':
+            case 'what do i have on saturday':
+            case 'what do i have next saturday':
+            case 'classes next saturday':
+            case 'classes saturday':
+                dayCode = 6;
                 break;
             default:
-                currDay = -1;
+                dayCode = -999;
                 break;
         }
-        console.log("currDay: ", currDay);
-        return currDay;
+
+        return dayCode;
     }
 
     function getHours() {

@@ -2,7 +2,8 @@ module.exports = function () {
     // node modules
     global.restify = require('restify');
     global.builder = require('botbuilder');
-    global.request = require('request');
+    glabal.request = require('request');
+    global.requestpromise = require('request-promise');
     global.async = require('async');
     global.google = require('google');
     global.http = require('http');

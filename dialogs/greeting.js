@@ -1,7 +1,7 @@
 module.exports = function () {
     bot.dialog('greetingDialog', function (session, args) {
         var IVLEToken = builder.EntityRecognizer.findEntity(args.intent.entities, 'IVLEtoken');
-        if (IVLEToken) {
+        if (args && IVLEToken) {
             session.userData.token = IVLEToken.entity;
             //session.send(session.token);
 
@@ -73,7 +73,7 @@ module.exports = function () {
         }
     }).triggerAction({
         matches: 'Greeting'
-    });
+    }).beginDialogAction('alrHome', 'restartDialog', { matches: 'Restart'});
 
     function getFinalTimetable(timetableRaw) {
         var mon = [];
@@ -115,7 +115,7 @@ module.exports = function () {
         }
 
         var timetable = [];
-        timetable.push(mon, tue, wed, thurs, fri, sat, sun);
+        timetable.push(sun, mon, tue, wed, thurs, fri, sat); // Date object in JS starts the week with Sunday
         // console.log('in function');
         // console.log(timetable);
         return timetable;

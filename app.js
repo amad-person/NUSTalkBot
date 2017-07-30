@@ -7,7 +7,7 @@ require('./dialogs/ask.js')();
 require('./dialogs/timetable.js')();
 require('./dialogs/welcome.js')();
 require('./dialogs/help.js')();
-require('./dialogs/restart.js');
+require('./dialogs/restart.js')();
 
 // root dialog
 bot.dialog('rootDialog',
@@ -24,15 +24,17 @@ bot.dialog('defaultDialog', function (session) {
 });
 
 // first time use
-bot.on('conversationUpdate', function (message) {
-    if (message.membersAdded) {
-        message.membersAdded.forEach(function (identity) {
-            if (identity.id === message.address.bot.id) {
-                var reply = new builder.Message()
-                    .address(message.address)
-                    .text("Hey! I\'m the NUSTalkBot. Type start to see the welcome message.");
-                bot.send(reply);
-            }
-        });
-    }
-});
+
+// bot.on('conversationUpdate', function (message, session) {
+//     if (message.membersAdded) {
+//         message.membersAdded.forEach(function (identity) {
+//             if (identity.id === message.address.bot.id) {
+//                 var reply = new builder.Message()
+//                     .address(message.address)
+//                     .text("Hey! I\'m the NUSTalkBot. Type start to see the welcome message.");
+//                 bot.send(reply);
+//                 session.replaceDialog('rootDialog');
+//             }
+//         });
+//     }
+// });

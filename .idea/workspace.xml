@@ -2,217 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="979e9719-6f83-470c-ae48-fb021de90549" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dialogs/restart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/CHANGES.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/asap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/browser-asap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/browser-raw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/asap/raw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/build.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/done.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/es6-extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/finally.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/node-extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/rejection-tracking.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/domains/synchronous.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/index.d.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/done.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/es6-extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/finally.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/node-extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/rejection-tracking.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/lib/synchronous.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/polyfill-done.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/polyfill.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/done.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/es6-extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/finally.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/node-extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/rejection-tracking.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/setimmediate/synchronous.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/done.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/es6-extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/finally.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/node-extensions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/rejection-tracking.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/promise/src/synchronous.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connectorSetup.js" afterPath="$PROJECT_DIR$/connectorSetup.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/ask.js" afterPath="$PROJECT_DIR$/dialogs/ask.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/greeting.js" afterPath="$PROJECT_DIR$/dialogs/greeting.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/help.js" afterPath="$PROJECT_DIR$/dialogs/help.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/history.js" afterPath="$PROJECT_DIR$/dialogs/history.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/restart.js" afterPath="$PROJECT_DIR$/dialogs/restart.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/timetable.js" afterPath="$PROJECT_DIR$/dialogs/timetable.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/welcome.js" afterPath="$PROJECT_DIR$/dialogs/welcome.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/async/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/LICENSE" afterPath="$PROJECT_DIR$/node_modules/async/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/README.md" afterPath="$PROJECT_DIR$/node_modules/async/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/apply.js" afterPath="$PROJECT_DIR$/node_modules/async/apply.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/applyEach.js" afterPath="$PROJECT_DIR$/node_modules/async/applyEach.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/applyEachSeries.js" afterPath="$PROJECT_DIR$/node_modules/async/applyEachSeries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/asyncify.js" afterPath="$PROJECT_DIR$/node_modules/async/asyncify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/auto.js" afterPath="$PROJECT_DIR$/node_modules/async/auto.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/autoInject.js" afterPath="$PROJECT_DIR$/node_modules/async/autoInject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/bower.json" afterPath="$PROJECT_DIR$/node_modules/async/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/cargo.js" afterPath="$PROJECT_DIR$/node_modules/async/cargo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/compose.js" afterPath="$PROJECT_DIR$/node_modules/async/compose.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/concat.js" afterPath="$PROJECT_DIR$/node_modules/async/concat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/concatLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/concatLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/concatSeries.js" afterPath="$PROJECT_DIR$/node_modules/async/concatSeries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/constant.js" afterPath="$PROJECT_DIR$/node_modules/async/constant.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/detect.js" afterPath="$PROJECT_DIR$/node_modules/async/detect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/detectLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/detectLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/detectSeries.js" afterPath="$PROJECT_DIR$/node_modules/async/detectSeries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/dir.js" afterPath="$PROJECT_DIR$/node_modules/async/dir.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/dist/async.js" afterPath="$PROJECT_DIR$/node_modules/async/dist/async.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/dist/async.min.js" afterPath="$PROJECT_DIR$/node_modules/async/dist/async.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/doDuring.js" afterPath="$PROJECT_DIR$/node_modules/async/doDuring.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/doUntil.js" afterPath="$PROJECT_DIR$/node_modules/async/doUntil.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/doWhilst.js" afterPath="$PROJECT_DIR$/node_modules/async/doWhilst.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/during.js" afterPath="$PROJECT_DIR$/node_modules/async/during.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/each.js" afterPath="$PROJECT_DIR$/node_modules/async/each.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/eachLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/eachLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/eachOf.js" afterPath="$PROJECT_DIR$/node_modules/async/eachOf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/eachOfLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/eachOfLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/eachOfSeries.js" afterPath="$PROJECT_DIR$/node_modules/async/eachOfSeries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/eachSeries.js" afterPath="$PROJECT_DIR$/node_modules/async/eachSeries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/ensureAsync.js" afterPath="$PROJECT_DIR$/node_modules/async/ensureAsync.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/every.js" afterPath="$PROJECT_DIR$/node_modules/async/every.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/everyLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/everyLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/everySeries.js" afterPath="$PROJECT_DIR$/node_modules/async/everySeries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/filter.js" afterPath="$PROJECT_DIR$/node_modules/async/filter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/filterLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/filterLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/filterSeries.js" afterPath="$PROJECT_DIR$/node_modules/async/filterSeries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/forever.js" afterPath="$PROJECT_DIR$/node_modules/async/forever.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/groupBy.js" afterPath="$PROJECT_DIR$/node_modules/async/groupBy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/groupByLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/groupByLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/groupBySeries.js" afterPath="$PROJECT_DIR$/node_modules/async/groupBySeries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/index.js" afterPath="$PROJECT_DIR$/node_modules/async/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/DoublyLinkedList.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/DoublyLinkedList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/applyEach.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/applyEach.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/breakLoop.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/breakLoop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/consoleFunc.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/consoleFunc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/createTester.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/createTester.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/doLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/doLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/doParallel.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/doParallel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/doParallelLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/doParallelLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/eachOfLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/eachOfLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/filter.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/filter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/findGetResult.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/findGetResult.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/getIterator.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/getIterator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/initialParams.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/initialParams.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/iterator.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/iterator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/map.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/notId.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/notId.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/once.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/once.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/onlyOnce.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/onlyOnce.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/parallel.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/parallel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/queue.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/queue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/reject.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/reject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/setImmediate.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/setImmediate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/slice.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/slice.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/withoutIndex.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/withoutIndex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/internal/wrapAsync.js" afterPath="$PROJECT_DIR$/node_modules/async/internal/wrapAsync.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/log.js" afterPath="$PROJECT_DIR$/node_modules/async/log.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/map.js" afterPath="$PROJECT_DIR$/node_modules/async/map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/mapLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/mapLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/mapSeries.js" afterPath="$PROJECT_DIR$/node_modules/async/mapSeries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/mapValues.js" afterPath="$PROJECT_DIR$/node_modules/async/mapValues.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/mapValuesLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/mapValuesLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/mapValuesSeries.js" afterPath="$PROJECT_DIR$/node_modules/async/mapValuesSeries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/memoize.js" afterPath="$PROJECT_DIR$/node_modules/async/memoize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/nextTick.js" afterPath="$PROJECT_DIR$/node_modules/async/nextTick.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/package.json" afterPath="$PROJECT_DIR$/node_modules/async/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/parallel.js" afterPath="$PROJECT_DIR$/node_modules/async/parallel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/parallelLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/parallelLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/priorityQueue.js" afterPath="$PROJECT_DIR$/node_modules/async/priorityQueue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/queue.js" afterPath="$PROJECT_DIR$/node_modules/async/queue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/race.js" afterPath="$PROJECT_DIR$/node_modules/async/race.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/reduce.js" afterPath="$PROJECT_DIR$/node_modules/async/reduce.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/reduceRight.js" afterPath="$PROJECT_DIR$/node_modules/async/reduceRight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/reflect.js" afterPath="$PROJECT_DIR$/node_modules/async/reflect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/reflectAll.js" afterPath="$PROJECT_DIR$/node_modules/async/reflectAll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/reject.js" afterPath="$PROJECT_DIR$/node_modules/async/reject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/rejectLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/rejectLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/rejectSeries.js" afterPath="$PROJECT_DIR$/node_modules/async/rejectSeries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/retry.js" afterPath="$PROJECT_DIR$/node_modules/async/retry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/retryable.js" afterPath="$PROJECT_DIR$/node_modules/async/retryable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/seq.js" afterPath="$PROJECT_DIR$/node_modules/async/seq.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/series.js" afterPath="$PROJECT_DIR$/node_modules/async/series.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/setImmediate.js" afterPath="$PROJECT_DIR$/node_modules/async/setImmediate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/some.js" afterPath="$PROJECT_DIR$/node_modules/async/some.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/someLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/someLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/someSeries.js" afterPath="$PROJECT_DIR$/node_modules/async/someSeries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/sortBy.js" afterPath="$PROJECT_DIR$/node_modules/async/sortBy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/timeout.js" afterPath="$PROJECT_DIR$/node_modules/async/timeout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/times.js" afterPath="$PROJECT_DIR$/node_modules/async/times.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/timesLimit.js" afterPath="$PROJECT_DIR$/node_modules/async/timesLimit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/timesSeries.js" afterPath="$PROJECT_DIR$/node_modules/async/timesSeries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/transform.js" afterPath="$PROJECT_DIR$/node_modules/async/transform.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/tryEach.js" afterPath="$PROJECT_DIR$/node_modules/async/tryEach.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/unmemoize.js" afterPath="$PROJECT_DIR$/node_modules/async/unmemoize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/until.js" afterPath="$PROJECT_DIR$/node_modules/async/until.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/waterfall.js" afterPath="$PROJECT_DIR$/node_modules/async/waterfall.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/async/whilst.js" afterPath="$PROJECT_DIR$/node_modules/async/whilst.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/dotenv/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/dotenv/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/dotenv/LICENSE" afterPath="$PROJECT_DIR$/node_modules/dotenv/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/dotenv/README.md" afterPath="$PROJECT_DIR$/node_modules/dotenv/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/dotenv/config.js" afterPath="$PROJECT_DIR$/node_modules/dotenv/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/dotenv/lib/main.js" afterPath="$PROJECT_DIR$/node_modules/dotenv/lib/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/dotenv/package.json" afterPath="$PROJECT_DIR$/node_modules/dotenv/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/google/.npmignore" afterPath="$PROJECT_DIR$/node_modules/google/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/google/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/google/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/google/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/google/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/google/LICENSE" afterPath="$PROJECT_DIR$/node_modules/google/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/google/README.md" afterPath="$PROJECT_DIR$/node_modules/google/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/google/lib/google.js" afterPath="$PROJECT_DIR$/node_modules/google/lib/google.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/google/package.json" afterPath="$PROJECT_DIR$/node_modules/google/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/google/test/google.test.js" afterPath="$PROJECT_DIR$/node_modules/google/test/google.test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/google/test/mocha.opts" afterPath="$PROJECT_DIR$/node_modules/google/test/mocha.opts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/request/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/LICENSE" afterPath="$PROJECT_DIR$/node_modules/request/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/README.md" afterPath="$PROJECT_DIR$/node_modules/request/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/auth.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/auth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/cookies.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/cookies.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/getProxyFromURI.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/getProxyFromURI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/har.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/har.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/helpers.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/multipart.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/multipart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/oauth.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/oauth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/querystring.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/querystring.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/redirect.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/redirect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/tunnel.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/tunnel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/package.json" afterPath="$PROJECT_DIR$/node_modules/request/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/request.js" afterPath="$PROJECT_DIR$/node_modules/request/request.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/.eslintignore" afterPath="$PROJECT_DIR$/node_modules/restify/.eslintignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/.eslintrc" afterPath="$PROJECT_DIR$/node_modules/restify/.eslintrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/.github/ISSUE_TEMPLATE.md" afterPath="$PROJECT_DIR$/node_modules/restify/.github/ISSUE_TEMPLATE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/.github/PULL_REQUEST_TEMPLATE.md" afterPath="$PROJECT_DIR$/node_modules/restify/.github/PULL_REQUEST_TEMPLATE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/.jscsrc" afterPath="$PROJECT_DIR$/node_modules/restify/.jscsrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/.npmignore" afterPath="$PROJECT_DIR$/node_modules/restify/.npmignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/.tern-project" afterPath="$PROJECT_DIR$/node_modules/restify/.tern-project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/restify/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/CHANGES.md" afterPath="$PROJECT_DIR$/node_modules/restify/CHANGES.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/FEATURE_REQUESTS.md" afterPath="$PROJECT_DIR$/node_modules/restify/FEATURE_REQUESTS.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/LICENSE" afterPath="$PROJECT_DIR$/node_modules/restify/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/README.md" afterPath="$PROJECT_DIR$/node_modules/restify/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/bunyan_helper.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/bunyan_helper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/deprecationWarnings.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/deprecationWarnings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/dtrace.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/dtrace.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/errorTypes.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/errorTypes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/formatters/binary.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/formatters/binary.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/formatters/index.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/formatters/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/formatters/json.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/formatters/json.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/formatters/jsonp.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/formatters/jsonp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/formatters/text.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/formatters/text.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/http_date.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/http_date.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/accept.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/accept.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/audit.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/audit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/authorization.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/authorization.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/bodyParser.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/bodyParser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/bodyReader.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/bodyReader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/bunyan.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/bunyan.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/conditionalRequest.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/conditionalRequest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/date.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/date.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/fieldedTextBodyParser.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/fieldedTextBodyParser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/formBodyParser.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/formBodyParser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/fullResponse.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/fullResponse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/gzip.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/gzip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/index.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/jsonBodyParser.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/jsonBodyParser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/jsonp.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/jsonp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/metrics.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/metrics.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/multipartBodyParser.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/multipartBodyParser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/oauth2TokenParser.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/oauth2TokenParser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/pre/context.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/pre/context.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/pre/dedupeSlashes.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/pre/dedupeSlashes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/pre/pause.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/pre/pause.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/pre/prePath.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/pre/prePath.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/pre/reqIdHeaders.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/pre/reqIdHeaders.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/pre/strictQueryParams.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/pre/strictQueryParams.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/pre/userAgent.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/pre/userAgent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/query.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/query.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/requestExpiry.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/requestExpiry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/static.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/static.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/throttle.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/throttle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/utils/httpDate.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/utils/httpDate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/plugins/utils/shallowCopy.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/plugins/utils/shallowCopy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/request.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/request.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/response.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/response.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/router.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/server.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/upgrade.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/upgrade.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/lib/utils.js" afterPath="$PROJECT_DIR$/node_modules/restify/lib/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/restify/package.json" afterPath="$PROJECT_DIR$/node_modules/restify/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -232,18 +85,8 @@
       <file leaf-file-name="help.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogs/help.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="13" column="98" lean-forward="false" selection-start-line="13" selection-start-column="98" selection-end-line="13" selection-end-column="98" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcome.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dialogs/welcome.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+            <state relative-caret-position="285">
+              <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -252,18 +95,8 @@
       <file leaf-file-name="restart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogs/restart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            <state relative-caret-position="390">
+              <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -272,48 +105,28 @@
       <file leaf-file-name="ask.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dialogs/ask.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+            <state relative-caret-position="1560">
+              <caret line="104" column="15" lean-forward="false" selection-start-line="104" selection-start-column="15" selection-end-line="104" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="greeting.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dialogs/greeting.js">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="80" column="21" lean-forward="true" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+            <state relative-caret-position="135">
+              <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="history.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dialogs/history.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="timetable.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dialogs/timetable.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="48" column="32" lean-forward="false" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connectorSetup.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="connectorSetup.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/connectorSetup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="30" lean-forward="true" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+            <state relative-caret-position="60">
+              <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -334,6 +147,7 @@
       <find>dialogData</find>
       <find>course</find>
       <find>args</find>
+      <find>console.log</find>
     </findStrings>
     <replaceStrings>
       <replace>Module</replace>
@@ -348,16 +162,16 @@
         <option value="$PROJECT_DIR$/setup.js" />
         <option value="$PROJECT_DIR$/config.js" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.js" />
-        <option value="$PROJECT_DIR$/dialogs/help.js" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/connectorSetup.js" />
-        <option value="$PROJECT_DIR$/dialogs/ask.js" />
-        <option value="$PROJECT_DIR$/dialogs/restart.js" />
         <option value="$PROJECT_DIR$/dialogs/history.js" />
-        <option value="$PROJECT_DIR$/dialogs/welcome.js" />
-        <option value="$PROJECT_DIR$/dialogs/greeting.js" />
-        <option value="$PROJECT_DIR$/dialogs/timetable.js" />
+        <option value="$PROJECT_DIR$/dialogs/restart.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/dialogs/welcome.js" />
+        <option value="$PROJECT_DIR$/dialogs/help.js" />
+        <option value="$PROJECT_DIR$/dialogs/timetable.js" />
+        <option value="$PROJECT_DIR$/dialogs/greeting.js" />
+        <option value="$PROJECT_DIR$/dialogs/ask.js" />
+        <option value="$PROJECT_DIR$/connectorSetup.js" />
       </list>
     </option>
   </component>
@@ -526,12 +340,12 @@
       <workItem from="1500722827476" duration="17000" />
       <workItem from="1500722857231" duration="3756000" />
       <workItem from="1500893952717" duration="13365000" />
-      <workItem from="1501143759942" duration="17095000" />
+      <workItem from="1501143759942" duration="22812000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74540000" />
+    <option name="totallyTimeSpent" value="80257000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -546,6 +360,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.128125" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -891,14 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dialogs/help.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="13" column="98" lean-forward="false" selection-start-line="13" selection-start-column="98" selection-end-line="13" selection-end-column="98" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -907,58 +714,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/botbuilder/lib/botbuilder.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32865">
+          <caret line="2633" column="4" lean-forward="false" selection-start-line="2633" selection-start-column="4" selection-end-line="2633" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dialogs/history.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+        <state relative-caret-position="105">
+          <caret line="7" column="103" lean-forward="false" selection-start-line="7" selection-start-column="103" selection-end-line="7" selection-end-column="103" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogs/welcome.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        <state relative-caret-position="75">
+          <caret line="5" column="288" lean-forward="false" selection-start-line="5" selection-start-column="288" selection-end-line="5" selection-end-column="288" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogs/help.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogs/greeting.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="80" column="21" lean-forward="true" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+        <state relative-caret-position="684">
+          <caret line="119" column="34" lean-forward="true" selection-start-line="119" selection-start-column="34" selection-end-line="119" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogs/timetable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="48" column="32" lean-forward="false" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dialogs/ask.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+        <state relative-caret-position="276">
+          <caret line="127" column="22" lean-forward="false" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogs/restart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/connectorSetup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="30" lean-forward="true" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+        <state relative-caret-position="390">
+          <caret line="26" column="2" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -966,7 +773,23 @@
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="32" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dialogs/ask.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="104" column="15" lean-forward="false" selection-start-line="104" selection-start-column="15" selection-end-line="104" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connectorSetup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
           <folding />
         </state>
       </provider>

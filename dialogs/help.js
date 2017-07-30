@@ -8,12 +8,14 @@ module.exports = function () {
                 session.send("Choose a module and ask a question.");
                 break;
             case 'timetableHelp':
-                session.send("You can say things like \'when's my next class?\', \'classes today\', etc.");
+                session.send("You can say things like \'what do I have next Tuesday\', \'classes today\', etc.");
                 break;
             case 'historyHelp':
                 session.send("You can view all the links you've found helpful while using this bot.");
                 break;
         }
         session.endDialog("That's all. Hope this helped.");
+    }).triggerAction({
+        matches: 'Help'
     });
 };

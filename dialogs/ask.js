@@ -40,7 +40,7 @@ module.exports = function () {
         }
     ]).triggerAction({
         matches: 'Ask'
-    }).beginDialogAction('askHelp', 'helpDialog', { matches: 'Help'});
+    }).beginDialogAction('askHelp', 'helpDialog', { matches: 'Help'}).beginDialogAction('notHome', 'restartDialog', { matches: 'Restart'});
 
     bot.dialog('queryDialog', [
         function(session, args) {
@@ -50,7 +50,7 @@ module.exports = function () {
 
             if(!doesQueryExist(session, searchQuery, currModule)) {
                 // if query doesn't already exist, make a new search
-                console.log(doesQueryExist(session, searchQuery, currModule));
+
                 session.userData.linksObj = doSearch(session, searchQuery);
                 session.save();
                 session.userData.moduleQueries[currModule][searchQuery] = session.userData.linksObj;
@@ -63,7 +63,6 @@ module.exports = function () {
 
             // get first link
             var currLink = session.userData.linksObj[0];
-            // console.log("current link", currLink);
 
             // show link card
             session.userData.currentLink = currLink;
@@ -95,29 +94,26 @@ module.exports = function () {
     function doSearch(session, searchQuery) {
         var linksObj = [];
         google.resultsPerPage = 20; // get the first 20 links
-        google(searchQuery,
-            function (err, res) {
+        google(searchQuery, function (err, res) {
                 if(err) {
                     console.error(err);
                 }
 
                 res.links.splice(0, 1); // remove null object at index 0
-                linksObj = JSON.parse(JSON.stringify(res.links));
-                console.log(linksObj);
-                // console.log(res.links);
+                linksObj = res.links;
+                console.log('linksObj inside request: ', linksObj);
             });
 
         for(var i = 0; i < Object.keys(linksObj).length; i++) {
             linksObj[i].helpful = false;
         }
-        // console.log(linksObj);
-        console.log("link", linksObj);
+        console.log('linksObj outside request ', linksObj);
         return linksObj;
     }
 
     function doesQueryExist(session, searchQuery, currModule) {
         var currModuleQueries = session.userData.moduleQueries[currModule];
-        console.log(session.userData.moduleQueries);
+        // console.log(session.userData.moduleQueries);
         return (searchQuery in currModuleQueries);
     }
 

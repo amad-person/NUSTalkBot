@@ -1,7 +1,12 @@
 module.exports = function () {
     bot.dialog('restartDialog', [
-        function (session) {
-            builder.Prompts.choice(session, "Are you sure you want to go back?", "Yes|No", builder.ListStyle.button);
+        function (session, args) {
+            if(args.action === 'notHome') {
+                builder.Prompts.choice(session, "Are you sure you want to go back?", "Yes|No", builder.ListStyle.button);
+            } else {
+                session.send('You are already on the home page.');
+                session.endDialog();
+            }
         },
         function(session, results) {
             switch (results.response.entity.toLowerCase()) {

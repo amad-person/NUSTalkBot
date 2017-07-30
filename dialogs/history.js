@@ -5,7 +5,7 @@ module.exports = function () {
         session.send(historyStr);
     }).triggerAction({
         matches: 'History'
-    }).beginDialogAction('historyHelp', 'helpDialog', { matches: 'Help'});
+    }).beginDialogAction('historyHelp', 'helpDialog', { matches: 'Help'}).beginDialogAction('notHome', 'restartDialog', { matches: 'Restart'});
 
     function getHistory(session) {
         var historyStr = "";

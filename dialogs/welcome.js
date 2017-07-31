@@ -3,7 +3,7 @@ module.exports = function () {
         session.sendTyping();
 		
         session.send("I have some information for you.");
-        session.send("Commands you can type:</br>ask: ask questions after selecting a module</br>timetable: ask questions related to your lecture schedule</br>history: see a list of links you've visited today</br>restart: restart your conversation</br>help: see information about commands");
+        session.send("Commands you can type:  \nask: ask questions after selecting a module  \ntimetable: ask questions related to your lecture schedule  \nhistory: see a list of links you've visited today  \nrestart: restart your conversation  \nhelp: see information about commands");
 
         session.endDialog("That's it. Have fun!");
     }).triggerAction({

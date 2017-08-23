@@ -186,6 +186,8 @@ module.exports = function () {
         if(start > 12) {
             start = start - 12;
             sTime =  start + " pm";
+        } else if(start === 12) {
+            sTime =  start + " pm";
         } else {
             sTime = start + " am";
         }
@@ -196,9 +198,11 @@ module.exports = function () {
         var eTime = "";
         if(end > 12) {
             end = end - 12;
-            eTime = end + " pm"
+            eTime = end + " pm";
+        } else if() {
+            eTime = end + " pm";
         } else {
-            eTime = end + " am"
+            eTime = end + " am";
         }
         return eTime;
     }

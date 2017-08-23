@@ -106,6 +106,8 @@ module.exports = function () {
                     linksObj[i].helpful = false;
                 }
 
+                console.log(linksObj);
+
                 session.userData.linksObj = linksObj;
                 session.save();
             });

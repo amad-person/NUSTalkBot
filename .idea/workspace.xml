@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="979e9719-6f83-470c-ae48-fb021de90549" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/ask.js" afterPath="$PROJECT_DIR$/dialogs/ask.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dialogs/timetable.js" afterPath="$PROJECT_DIR$/dialogs/timetable.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -66,8 +64,8 @@
       <file leaf-file-name="timetable.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dialogs/timetable.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="190" column="10" lean-forward="false" selection-start-line="190" selection-start-column="10" selection-end-line="190" selection-end-column="10" />
+            <state relative-caret-position="494">
+              <caret line="201" column="28" lean-forward="false" selection-start-line="201" selection-start-column="28" selection-end-line="201" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -307,12 +305,12 @@
       <workItem from="1501416630803" duration="42000" />
       <workItem from="1501416681937" duration="205000" />
       <workItem from="1501486925340" duration="147000" />
-      <workItem from="1503472274944" duration="571000" />
+      <workItem from="1503472274944" duration="622000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81699000" />
+    <option name="totallyTimeSpent" value="81750000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -770,8 +768,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dialogs/timetable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="190" column="10" lean-forward="false" selection-start-line="190" selection-start-column="10" selection-end-line="190" selection-end-column="10" />
+        <state relative-caret-position="494">
+          <caret line="201" column="28" lean-forward="false" selection-start-line="201" selection-start-column="28" selection-end-line="201" selection-end-column="28" />
           <folding />
         </state>
       </provider>

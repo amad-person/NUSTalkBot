@@ -199,7 +199,7 @@ module.exports = function () {
         if(end > 12) {
             end = end - 12;
             eTime = end + " pm";
-        } else if() {
+        } else if(end === 12) {
             eTime = end + " pm";
         } else {
             eTime = end + " am";

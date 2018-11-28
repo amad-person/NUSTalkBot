@@ -5,6 +5,7 @@ module.exports = function () {
     global.request = require('request');
     global.async = require('async');
     global.google = require('google');
+    global.http = require('http');
     require('dotenv').load(); // to load environment variables
 
     // create chat connector for communicating bot framework service
@@ -15,32 +16,18 @@ module.exports = function () {
 
     // bot declaration
     global.bot = new builder.UniversalBot(connector, function (session) {
-        session.userData.about = {};
-        session.userData.about = {
-            'name': "Aadyaa",
-            'moduleNames': ["CS1020", "CS2100", "GER1000"],
-            // TODO: use IVLE data, currently using default data here
-            'modules': {
-                'CS1020': {
-                },
-                'CS2100': {
-                },
-                'GER1000': {
-                }
-            },
-            'moduleQueries': {
-                'CS1020': {
-                },
-                'CS2100': {
-                },
-                'GER1000': {
-                }
-            }
-        };
+
+        session.userData.token = "";
+        session.userData.name = "default";
+        session.userData.moduleNames =[];
+        session.userData.modules = [];
+        session.userData.moduleQueries = [];
+        session.userData.timetableRaw = [];
+        session.userData.timetable = [];
 
         session.save();
 
-        // TODO: replace URLs to IVLE compatible ones by using User.getToken(). Data is obtained from NUSMods here.
+        // data is obtained from NUSMods here.
         // https://wiki.nus.edu.sg/display/ivlelapi/Timetable
         // https://wiki.nus.edu.sg/display/ivlelapi/Module
 
